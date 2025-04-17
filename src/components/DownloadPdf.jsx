@@ -8,7 +8,7 @@ const DownloadPdf = ({ targetId }) => {
             html2pdf().from(element).set({
                 margin: 1,
                 filename: `markdown-${Date.now()}.pdf`,
-                html2canvas: { scale: 2 },
+                html2canvas: { scale: 1 },
                 jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
             }).save();
         }
