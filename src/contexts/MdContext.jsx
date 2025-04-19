@@ -1,13 +1,12 @@
-import { createContext, useCallback, useEffect, useState } from "react";
-import Markdown from "react-markdown";
+import { createContext } from "react";
+
 
 export const mdContext = createContext()
 
 
 export const MdContextProvider = ({ children }) => {
 
-    const [inputText, setInputText] = useState("")
+    const values = {}
 
-    const values = { inputText, setInputText, }
     return <mdContext.Provider value={values}>{children}</mdContext.Provider>
 }

@@ -1,20 +1,16 @@
-import { Routes, Route } from "react-router-dom"
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import Navbar from "./components/Navbar"
-import GuidePage from "./components/GuidePage"
-import HomePage from "./components/HomePage"
-import Layout from "./components/Layout"
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Layout from './Layout'
+import Home from './components/Home/Home'
+import Guide from './components/Guide/Guide'
 
-
-function App() {
-
+const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="" element={<HomePage />} />
-          <Route path="/guide" element={<GuidePage />} />
+        <Route element={<Layout />}>
+          <Route path='' element={<Home />} />
+          <Route path='guide' element={<Guide />} />
         </Route>
       </Routes>
     </>
